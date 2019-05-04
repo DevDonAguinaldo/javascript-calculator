@@ -1,4 +1,5 @@
-/* Practice Page For CSS */
+/* CSS for calculator */
+
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 html, body {
@@ -7,6 +8,7 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: black;
 }
 

@@ -74,43 +74,42 @@ function calculate() {
 
     // if the display is empty then display operand in the array
     if (num == '') {
-        console.log(operands[0]); // logs current number
+        console.log(operands[0]);        // logs current number
         display.innerHTML = operands[0]; // displays current number
-        empty(operands); // empties the array
+        empty(operands);                 // empties the array
     }
     else if (operands.length == 0) {
-        console.log(num); // logs current number
+        console.log(num);        // logs current number
         display.innerHTML = num; // displays current number
     }
     else {
         operands.push(parseFloat(num)); // second operand
-
         // evaluate the two numbers
         switch (operator) {
             case '+':
                 results = operands[0] + operands[1]; // computation
-                display.innerHTML = results; // display the results
-                empty(operands); // clear the array
+                display.innerHTML = results;         // display the results
+                empty(operands);                     // clear the array
                 break;
             case '-':
                 results = operands[0] - operands[1]; // computation
-                display.innerHTML = results; // display the results
-                empty(operands); // clear the array
+                display.innerHTML = results;         // display the results
+                empty(operands);                     // clear the array
                 break;
             case '*':
                 results = operands[0] * operands[1]; // computation
-                display.innerHTML = results; // display the results
-                empty(operands); // clear the array
+                display.innerHTML = results;         // display the results
+                empty(operands);                     // clear the array
                 break;
             case '/':
                 results = operands[0] / operands[1]; // computation
-                display.innerHTML = results; // display the results
-                empty(operands); // clear the array
+                display.innerHTML = results;         // display the results
+                empty(operands);                     // clear the array
                 break;
             case '%':
                 results = operands[0] % operands[1]; // computation
-                display.innerHTML = results; // display the results
-                empty(operands); // clear the array
+                display.innerHTML = results;         // display the results
+                empty(operands);                     // clear the array
             default:
                 break;
         }
