@@ -1,0 +1,52 @@
+<!-- Practice Page For HTML -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="practice.css">
+    <title>My Calculator</title>
+</head>
+<body>
+    <header class="container"><h1>DONALD'S CALCULATOR</h1></header>
+
+    <!-- JavaScript Calculator -->
+    <div class='container' id="calculator">
+        <!-- Displays numbers on the screen -->
+        <div class='container' id="display"></div>
+
+        <!-- Displays keys on screen -->
+        <section class="container" id="keys">
+            <button id="clear-btn" onclick="clearDisplay()">C</button>
+            <button id="add-btn" onclick="add()">+</button>
+            <button id="sub-btn" onclick="subtract()">-</button>
+            <button id="mul-btn" onclick="multiply()">x</button>
+            <button id="div-btn" onclick="divide()">/</button>
+            <button id="rem-btn" onclick="remainder()">%</button>
+            <button class="btn-num" id="btn-7" onclick="changeDisplayValue(this)">7</button>
+            <button class="btn-num" id="btn-8" onclick="changeDisplayValue(this)">8</button>
+            <button class="btn-num" id="btn-9" onclick="changeDisplayValue(this)">9</button>
+            <button class="btn-num" id="btn-4" onclick="changeDisplayValue(this)">4</button>
+            <button class="btn-num" id="btn-5" onclick="changeDisplayValue(this)">5</button>
+            <button class="btn-num" id="btn-6" onclick="changeDisplayValue(this)">6</button>
+            <button class="btn-num" id="btn-1" onclick="changeDisplayValue(this)">1</button>
+            <button class="btn-num" id="btn-2" onclick="changeDisplayValue(this)">2</button>
+            <button class="btn-num" id="btn-3" onclick="changeDisplayValue(this)">3</button>
+            <button class="btn-num" id="btn-0" onclick="changeDisplayValue(this)">0</button>
+            <button id="dec-btn" onclick="decimal()">.</button>
+            <button id="equal-btn" onclick="calculate()">=</button>
+        </section>
+    </div>
+
+    <footer>
+        copyright Donald Aguinaldo
+    </footer>
+
+</body>
+<script src="practice.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</html>
