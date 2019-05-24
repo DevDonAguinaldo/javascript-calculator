@@ -67,6 +67,11 @@ function decimal() {
     display.innerHTML += '.';
 }
 
+// changes the sign of the current number
+function posneg() {
+    display.innerHTML *= -1; 
+}
+
 // calculates the two numbers in the array depending on the operator
 function calculate() {
     // check to see if there is another number to operate on
