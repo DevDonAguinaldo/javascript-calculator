@@ -6,21 +6,10 @@ var operands = [];                                // operands array
 var operator = '';                                // operator character
 var results = 0.0;                                // result number
 
-// function to change display
-function changeDisplayValue(e) {
-    let num = e.innerHTML; // make variable of the value
-    display.innerHTML += num; // change display
-}
-
-// clears the screen
-function clearDisplay() {
-    display.innerHTML = null;    
-}
-
-// empties array
-function empty(arr) {
-    arr.length = 0;
-}
+const clearDisplay = () => {display.innerHTML = null;} // clears the screen
+const empty = (arr) => {arr.length = 0;} // empties array
+const decimal = () => { display.innerHTML += '.'; } // adds a decimal point to the number on display
+const posneg = () => {display.innerHTML *= -1}; // changes the sign of the current number
 
 // adds the numbers in the array
 function add() {
@@ -62,16 +51,6 @@ function remainder() {
     clearDisplay(); // clear the display for next number
 }
 
-// adds a decimal point to the number on display
-function decimal() {
-    display.innerHTML += '.';
-}
-
-// changes the sign of the current number
-function posneg() {
-    display.innerHTML *= -1; 
-}
-
 // calculates the two numbers in the array depending on the operator
 function calculate() {
     // check to see if there is another number to operate on
@@ -79,14 +58,10 @@ function calculate() {
 
     // if the display is empty then display operand in the array
     if (num == '') {
-        console.log(operands[0]);        // logs current number
         display.innerHTML = operands[0]; // displays current number
         empty(operands);                 // empties the array
     }
-    else if (operands.length == 0) {
-        console.log(num);        // logs current number
-        display.innerHTML = num; // displays current number
-    }
+    else if (operands.length === 0) display.innerHTML = num; // displays current number
     else {
         operands.push(parseFloat(num)); // second operand
         // evaluate the two numbers
