@@ -90,6 +90,7 @@ function calculate() {
                 results = operands[0] % operands[1]; // computation
                 display.innerHTML = results;         // display the results
                 empty(operands);                     // clear the array
+                break;
             default:
                 break;
         }
